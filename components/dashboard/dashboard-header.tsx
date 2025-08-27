@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
-import { LogOut, Settings, User, CheckSquare, BarChart3, Clock, History } from "lucide-react"
+import { LogOut, Settings, User, CheckSquare, BarChart3, Clock, History, ListTodo } from "lucide-react"
 import { createClient } from "@/lib/supabase/client"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
@@ -32,6 +32,13 @@ export function DashboardHeader({ user, profile }: DashboardHeaderProps) {
               <Link href="/study-session">
                 <Clock className="h-4 w-4 mr-2" />
                 Estudar
+              </Link>
+            </Button>
+
+            <Button variant="outline" size="sm" asChild>
+              <Link href="/tasks">
+                <ListTodo className="h-4 w-4 mr-2" />
+                Tarefas
               </Link>
             </Button>
 
