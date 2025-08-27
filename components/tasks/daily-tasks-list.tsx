@@ -8,10 +8,22 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Plus, AlertTriangle, Calendar, Clock, Filter } from "lucide-react"
 
+interface Task {
+  id: string
+  titulo: string
+  descricao?: string
+  categoria: string
+  prioridade: string
+  tempo_estimado?: number
+  status: string
+  data_vencimento: string
+  concluida_em?: string
+}
+
 interface DailyTasksListProps {
   userId: string
-  todayTasks: any[]
-  overdueTasks: any[]
+  todayTasks: Task[]
+  overdueTasks: Task[]
 }
 
 export function DailyTasksList({ userId, todayTasks, overdueTasks }: DailyTasksListProps) {

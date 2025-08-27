@@ -85,6 +85,39 @@
 
 ---
 
+## Fase 8 – Relatórios e Exportação 🚀 FUTURO
+**Objetivo:** Gerar relatórios detalhados e exportar dados.
+- [ ] Relatórios em PDF/Excel do progresso mensal
+- [ ] Exportação de histórico de sessões
+- [ ] Relatórios de produtividade por período
+- [ ] Comparação de desempenho entre períodos
+- [ ] Relatórios personalizáveis por matéria
+**Aceite:** Relatórios gerados corretamente com dados atualizados.
+
+---
+
+## Fase 9 – Gamificação e Metas 🚀 FUTURO
+**Objetivo:** Aumentar engajamento com elementos de gamificação.
+- [ ] Sistema de streaks e recompensas
+- [ ] Badges por conquistas
+- [ ] Sistema de metas diárias/semanais
+- [ ] Ranking de produtividade (opcional)
+- [ ] Notificações e lembretes personalizados
+**Aceite:** Sistema de gamificação funcional e motivador.
+
+---
+
+## Fase 10 – Integrações Externas 🚀 FUTURO
+**Objetivo:** Conectar com outras ferramentas e serviços.
+- [ ] Integração com Google Calendar
+- [ ] Sincronização com Notion/Trello
+- [ ] Exportação para planilhas Google Sheets
+- [ ] Integração com sistemas de flashcards (Anki)
+- [ ] API pública para desenvolvedores
+**Aceite:** Integrações funcionais e seguras.
+
+---
+
 ## Status do Projeto 🎯
 
 ### ✅ **IMPLEMENTADO (Fases 1-6)**
@@ -100,6 +133,11 @@
 
 ### ⏳ **PRÓXIMAS FASES**
 - Integração com n8n para automações (Fase 7)
+
+### 🚀 **FUTURO**
+- Relatórios e exportação de dados (Fase 8)
+- Gamificação e sistema de metas (Fase 9)
+- Integrações externas (Fase 10)
 
 ### 🛠️ **RECURSOS TÉCNICOS**
 - **Frontend:** Next.js 15 + React 19 + TypeScript

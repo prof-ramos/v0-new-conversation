@@ -4,9 +4,21 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { AlertTriangle, Calendar, TrendingUp, Target } from "lucide-react"
 
+interface Task {
+  id: string
+  titulo: string
+  descricao?: string
+  categoria: string
+  prioridade: string
+  tempo_estimado?: number
+  status: string
+  data_vencimento: string
+  concluida_em?: string
+}
+
 interface TasksStatsProps {
-  weekTasks: any[]
-  overdueTasks: any[]
+  weekTasks: Task[]
+  overdueTasks: Task[]
 }
 
 export function TasksStats({ weekTasks, overdueTasks }: TasksStatsProps) {
@@ -68,7 +80,7 @@ export function TasksStats({ weekTasks, overdueTasks }: TasksStatsProps) {
         <CardContent>
           <div className="text-2xl font-bold capitalize">
             {Object.keys(categoryStats).length > 0 
-              ? Object.entries(categoryStats).sort(([,a], [,b]) => b - a)[0][0]
+              ? Object.entries(categoryStats).sort(([,a], [,b]) => (b as number) - (a as number))[0][0]
               : 'Nenhuma'
             }
           </div>

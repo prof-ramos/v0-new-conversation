@@ -11,8 +11,20 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { createClient } from "@/lib/supabase/client"
 import { useRouter } from "next/navigation"
 
+interface Task {
+  id: string
+  titulo: string
+  descricao?: string
+  categoria: string
+  prioridade: string
+  tempo_estimado?: number
+  status: string
+  data_vencimento: string
+  concluida_em?: string
+}
+
 interface TaskItemProps {
-  task: any
+  task: Task
   userId: string
   isOverdue?: boolean
 }
