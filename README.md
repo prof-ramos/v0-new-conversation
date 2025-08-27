@@ -23,8 +23,8 @@ Objetivo: oferecer um painel simples e poderoso para acompanhar progresso no edi
 ## 🔑 Variáveis de ambiente
 Copiar `.env.example` para `.env.local` e preencher:
 ```bash
-VITE_SUPABASE_URL=
-VITE_SUPABASE_ANON_KEY=
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
 ```
 
 ## 🧑‍💻 Como rodar
