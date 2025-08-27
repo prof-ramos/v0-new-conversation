@@ -1,30 +1,42 @@
-# New conversation
+# Study Dashboard
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Dashboard de estudos e tarefas, desenvolvido de forma incremental e testado a cada fase.  
+Objetivo: oferecer um painel simples e poderoso para acompanhar progresso no edital, evolução dos estudos e rotina diária.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/gabriels-projects-247c04a7/v0-new-conversation)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/rjfwrPxFlK5)
+## 🚀 Stack
+- **Frontend:** React + Vite
+- **Estilo:** Tailwind CSS + shadcn/ui
+- **Backend:** Supabase (Auth + Postgres)
+- **Deploy:** Vercel
+- **Automação:** Integração via Webhooks → n8n
 
-## Overview
+## 📂 Estrutura de pastas
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+/docs/specs/         -> anotações e decisões
+/supabase/migrations -> arquivos SQL
+/src/app/            -> rotas/pages
+/src/components/     -> ui
+/src/features/       -> dashboard, syllabus, timeline, tasks
+/src/lib/            -> supabase client
+/public/             -> estáticos
 
-## Deployment
+## 🔑 Variáveis de ambiente
+Copiar `.env.example` para `.env.local` e preencher:
+```bash
+VITE_SUPABASE_URL=
+VITE_SUPABASE_ANON_KEY=
+```
 
-Your project is live at:
+## 🧑‍💻 Como rodar
+```bash
+pnpm install
+pnpm dev
+```
 
-**[https://vercel.com/gabriels-projects-247c04a7/v0-new-conversation](https://vercel.com/gabriels-projects-247c04a7/v0-new-conversation)**
+## ✅ Roadmap
 
-## Build your app
+O desenvolvimento segue em fases incrementais.  
+Cada fase só começa após a anterior estar concluída, testada e aprovada.
 
-Continue building your app on:
+Confira o ROADMAP.md.
 
-**[https://v0.app/chat/projects/rjfwrPxFlK5](https://v0.app/chat/projects/rjfwrPxFlK5)**
-
-## How It Works
-
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
