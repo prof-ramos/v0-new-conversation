@@ -1,0 +1,90 @@
+[2025-08-27T18:31:51.467Z] [INFO] [GLOBAL_SETUP] === TESTE E2E INICIADO ===
+[2025-08-27T18:31:51.479Z] [INFO] [GLOBAL_SETUP] Teste: GLOBAL_SETUP
+[2025-08-27T18:31:51.479Z] [INFO] [GLOBAL_SETUP] Data/Hora: 2025-08-27T18:31:51.425Z
+[2025-08-27T18:31:51.480Z] [INFO] [GLOBAL_SETUP] ================================
+[2025-08-27T18:31:51.480Z] [INFO] [GLOBAL_SETUP] Iniciando configuração global dos testes E2E
+[2025-08-27T18:31:51.480Z] [INFO] [GLOBAL_SETUP] Verificando servidor de desenvolvimento...
+[2025-08-27T18:31:51.480Z] [INFO] [GLOBAL_SETUP] URL do servidor: http://localhost:3005
+[2025-08-27T18:31:51.481Z] [INFO] [GLOBAL_SETUP] Projetos configurados: chromium, firefox, webkit, Mobile Chrome, Mobile Safari
+[2025-08-27T18:31:51.481Z] [INFO] [GLOBAL_SETUP] Workers: 4
+[2025-08-27T18:31:51.481Z] [INFO] [GLOBAL_SETUP] Modo paralelo: Sim
+[2025-08-27T18:31:51.481Z] [INFO] [GLOBAL_SETUP] Configuração global concluída com sucesso
+[2025-08-27T18:31:51.481Z] [INFO] [GLOBAL_SETUP] === TESTE FINALIZADO ===
+[2025-08-27T18:31:51.481Z] [INFO] [GLOBAL_SETUP] Duração: 56ms (0.06s)
+[2025-08-27T18:31:51.481Z] [INFO] [GLOBAL_SETUP] Fim: 2025-08-27T18:31:51.481Z
+[2025-08-27T18:31:51.481Z] [INFO] [GLOBAL_SETUP] =========================
+[2025-08-27T18:43:42.824Z] [INFO] [GLOBAL_SETUP] === TESTE E2E INICIADO ===
+[2025-08-27T18:43:42.827Z] [INFO] [GLOBAL_SETUP] Teste: GLOBAL_SETUP
+[2025-08-27T18:43:42.827Z] [INFO] [GLOBAL_SETUP] Data/Hora: 2025-08-27T18:43:42.820Z
+[2025-08-27T18:43:42.827Z] [INFO] [GLOBAL_SETUP] ================================
+[2025-08-27T18:43:42.828Z] [INFO] [GLOBAL_SETUP] Iniciando configuração global dos testes E2E
+[2025-08-27T18:43:42.828Z] [INFO] [GLOBAL_SETUP] Verificando servidor de desenvolvimento...
+[2025-08-27T18:43:42.828Z] [INFO] [GLOBAL_SETUP] URL do servidor: http://localhost:3005
+[2025-08-27T18:43:42.829Z] [INFO] [GLOBAL_SETUP] Projetos configurados: chromium, firefox, webkit, Mobile Chrome, Mobile Safari
+[2025-08-27T18:43:42.830Z] [INFO] [GLOBAL_SETUP] Workers: 4
+[2025-08-27T18:43:42.830Z] [INFO] [GLOBAL_SETUP] Modo paralelo: Sim
+[2025-08-27T18:43:42.838Z] [INFO] [GLOBAL_SETUP] Configuração global concluída com sucesso
+[2025-08-27T18:43:42.839Z] [INFO] [GLOBAL_SETUP] === TESTE FINALIZADO ===
+[2025-08-27T18:43:42.842Z] [INFO] [GLOBAL_SETUP] Duração: 19ms (0.02s)
+[2025-08-27T18:43:42.843Z] [INFO] [GLOBAL_SETUP] Fim: 2025-08-27T18:43:42.839Z
+[2025-08-27T18:43:42.844Z] [INFO] [GLOBAL_SETUP] =========================
+[2025-08-27T18:46:34.039Z] [INFO] [GLOBAL_SETUP] === TESTE E2E INICIADO ===
+[2025-08-27T18:46:34.040Z] [INFO] [GLOBAL_SETUP] Teste: GLOBAL_SETUP
+[2025-08-27T18:46:34.041Z] [INFO] [GLOBAL_SETUP] Data/Hora: 2025-08-27T18:46:34.037Z
+[2025-08-27T18:46:34.041Z] [INFO] [GLOBAL_SETUP] ================================
+[2025-08-27T18:46:34.041Z] [INFO] [GLOBAL_SETUP] Iniciando configuração global dos testes E2E
+[2025-08-27T18:46:34.041Z] [INFO] [GLOBAL_SETUP] Verificando servidor de desenvolvimento...
+[2025-08-27T18:46:34.041Z] [INFO] [GLOBAL_SETUP] URL do servidor: http://localhost:3006
+[2025-08-27T18:46:34.041Z] [INFO] [GLOBAL_SETUP] Projetos configurados: chromium, firefox, webkit, Mobile Chrome, Mobile Safari
+[2025-08-27T18:46:34.041Z] [INFO] [GLOBAL_SETUP] Workers: 4
+[2025-08-27T18:46:34.041Z] [INFO] [GLOBAL_SETUP] Modo paralelo: Sim
+[2025-08-27T18:46:34.042Z] [INFO] [GLOBAL_SETUP] Configuração global concluída com sucesso
+[2025-08-27T18:46:34.042Z] [INFO] [GLOBAL_SETUP] === TESTE FINALIZADO ===
+[2025-08-27T18:46:34.042Z] [INFO] [GLOBAL_SETUP] Duração: 5ms (0.01s)
+[2025-08-27T18:46:34.042Z] [INFO] [GLOBAL_SETUP] Fim: 2025-08-27T18:46:34.042Z
+[2025-08-27T18:46:34.042Z] [INFO] [GLOBAL_SETUP] =========================
+[2025-08-27T18:48:20.734Z] [INFO] [GLOBAL_SETUP] === TESTE E2E INICIADO ===
+[2025-08-27T18:48:20.735Z] [INFO] [GLOBAL_SETUP] Teste: GLOBAL_SETUP
+[2025-08-27T18:48:20.735Z] [INFO] [GLOBAL_SETUP] Data/Hora: 2025-08-27T18:48:20.729Z
+[2025-08-27T18:48:20.735Z] [INFO] [GLOBAL_SETUP] ================================
+[2025-08-27T18:48:20.735Z] [INFO] [GLOBAL_SETUP] Iniciando configuração global dos testes E2E
+[2025-08-27T18:48:20.735Z] [INFO] [GLOBAL_SETUP] Verificando servidor de desenvolvimento...
+[2025-08-27T18:48:20.735Z] [INFO] [GLOBAL_SETUP] URL do servidor: http://localhost:3006
+[2025-08-27T18:48:20.736Z] [INFO] [GLOBAL_SETUP] Projetos configurados: chromium, firefox, webkit, Mobile Chrome, Mobile Safari
+[2025-08-27T18:48:20.736Z] [INFO] [GLOBAL_SETUP] Workers: 4
+[2025-08-27T18:48:20.736Z] [INFO] [GLOBAL_SETUP] Modo paralelo: Sim
+[2025-08-27T18:48:20.736Z] [INFO] [GLOBAL_SETUP] Configuração global concluída com sucesso
+[2025-08-27T18:48:20.736Z] [INFO] [GLOBAL_SETUP] === TESTE FINALIZADO ===
+[2025-08-27T18:48:20.737Z] [INFO] [GLOBAL_SETUP] Duração: 7ms (0.01s)
+[2025-08-27T18:48:20.737Z] [INFO] [GLOBAL_SETUP] Fim: 2025-08-27T18:48:20.736Z
+[2025-08-27T18:48:20.737Z] [INFO] [GLOBAL_SETUP] =========================
+[2025-08-27T18:53:15.989Z] [INFO] [GLOBAL_SETUP] === TESTE E2E INICIADO ===
+[2025-08-27T18:53:15.991Z] [INFO] [GLOBAL_SETUP] Teste: GLOBAL_SETUP
+[2025-08-27T18:53:15.992Z] [INFO] [GLOBAL_SETUP] Data/Hora: 2025-08-27T18:53:15.982Z
+[2025-08-27T18:53:15.993Z] [INFO] [GLOBAL_SETUP] ================================
+[2025-08-27T18:53:15.993Z] [INFO] [GLOBAL_SETUP] Iniciando configuração global dos testes E2E
+[2025-08-27T18:53:15.994Z] [INFO] [GLOBAL_SETUP] Verificando servidor de desenvolvimento...
+[2025-08-27T18:53:15.994Z] [INFO] [GLOBAL_SETUP] URL do servidor: http://localhost:3006
+[2025-08-27T18:53:15.994Z] [INFO] [GLOBAL_SETUP] Projetos configurados: chromium, firefox, webkit, Mobile Chrome, Mobile Safari
+[2025-08-27T18:53:15.994Z] [INFO] [GLOBAL_SETUP] Workers: 4
+[2025-08-27T18:53:15.994Z] [INFO] [GLOBAL_SETUP] Modo paralelo: Sim
+[2025-08-27T18:53:15.994Z] [INFO] [GLOBAL_SETUP] Configuração global concluída com sucesso
+[2025-08-27T18:53:15.995Z] [INFO] [GLOBAL_SETUP] === TESTE FINALIZADO ===
+[2025-08-27T18:53:15.995Z] [INFO] [GLOBAL_SETUP] Duração: 13ms (0.01s)
+[2025-08-27T18:53:15.995Z] [INFO] [GLOBAL_SETUP] Fim: 2025-08-27T18:53:15.995Z
+[2025-08-27T18:53:15.995Z] [INFO] [GLOBAL_SETUP] =========================
+[2025-08-27T18:54:23.417Z] [INFO] [GLOBAL_SETUP] === TESTE E2E INICIADO ===
+[2025-08-27T18:54:23.418Z] [INFO] [GLOBAL_SETUP] Teste: GLOBAL_SETUP
+[2025-08-27T18:54:23.418Z] [INFO] [GLOBAL_SETUP] Data/Hora: 2025-08-27T18:54:23.416Z
+[2025-08-27T18:54:23.419Z] [INFO] [GLOBAL_SETUP] ================================
+[2025-08-27T18:54:23.419Z] [INFO] [GLOBAL_SETUP] Iniciando configuração global dos testes E2E
+[2025-08-27T18:54:23.419Z] [INFO] [GLOBAL_SETUP] Verificando servidor de desenvolvimento...
+[2025-08-27T18:54:23.419Z] [INFO] [GLOBAL_SETUP] URL do servidor: http://localhost:3006
+[2025-08-27T18:54:23.419Z] [INFO] [GLOBAL_SETUP] Projetos configurados: chromium, firefox, webkit, Mobile Chrome, Mobile Safari
+[2025-08-27T18:54:23.419Z] [INFO] [GLOBAL_SETUP] Workers: 4
+[2025-08-27T18:54:23.419Z] [INFO] [GLOBAL_SETUP] Modo paralelo: Sim
+[2025-08-27T18:54:23.419Z] [INFO] [GLOBAL_SETUP] Configuração global concluída com sucesso
+[2025-08-27T18:54:23.419Z] [INFO] [GLOBAL_SETUP] === TESTE FINALIZADO ===
+[2025-08-27T18:54:23.419Z] [INFO] [GLOBAL_SETUP] Duração: 3ms (0.00s)
+[2025-08-27T18:54:23.419Z] [INFO] [GLOBAL_SETUP] Fim: 2025-08-27T18:54:23.419Z
+[2025-08-27T18:54:23.419Z] [INFO] [GLOBAL_SETUP] =========================

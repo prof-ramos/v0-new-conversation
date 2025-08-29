@@ -3,6 +3,8 @@ import { createClient } from "@/lib/supabase/server"
 import { TasksHeader } from "@/components/tasks/tasks-header"
 import { DailyTasksList } from "@/components/tasks/daily-tasks-list"
 import { TasksStats } from "@/components/tasks/tasks-stats"
+import { AuthenticationRequired } from "@/components/auth/authentication-required"
+import { taskLogger } from "@/lib/logger"
 
 export default async function TasksPage() {
   const supabase = await createClient()
@@ -11,8 +13,33 @@ export default async function TasksPage() {
     data: { user },
     error,
   } = await supabase.auth.getUser()
+  
+  taskLogger.info('Acesso à página de tarefas', {
+    hasUser: !!user,
+    hasError: !!error,
+    timestamp: Date.now()
+  })
+  
   if (error || !user) {
-    redirect("/auth/login")
+    taskLogger.warning('Usuário não autenticado tentando acessar /tasks', {
+      error: error?.message,
+      redirecting: 'Mostrando componente de autenticação necessária'
+    })
+    
+    return (
+      <AuthenticationRequired
+        title="🔐 Acesso às Tarefas Requer Login"
+        description="Para criar, gerenciar e acompanhar suas tarefas diárias, você precisa estar autenticado."
+        features={[
+          "✅ Criar e editar tarefas diárias",
+          "📊 Acompanhar progresso e estatísticas", 
+          "⚡ Filtrar tarefas por tempo estimado",
+          "📱 Sincronizar entre dispositivos",
+          "🏆 Visualizar tarefas concluídas"
+        ]}
+        returnPath="/auth/login"
+      />
+    )
   }
 
   // Buscar tarefas do dia atual

@@ -1,12 +1,13 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { TaskItem } from "./task-item"
 import { NewTaskForm } from "./new-task-form"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Plus, AlertTriangle, Calendar, Clock, Filter } from "lucide-react"
+import { clientTaskLogger as taskLogger } from "@/lib/client-logger"
 
 interface Task {
   id: string
@@ -29,6 +30,32 @@ interface DailyTasksListProps {
 export function DailyTasksList({ userId, todayTasks, overdueTasks }: DailyTasksListProps) {
   const [showNewTaskForm, setShowNewTaskForm] = useState(false)
   const [timeFilter, setTimeFilter] = useState<number | null>(null)
+
+  // Escutar evento do botão do cabeçalho
+  useEffect(() => {
+    taskLogger.info('Configurando listener para evento show-new-task-form', {
+      component: 'DailyTasksList'
+    })
+    
+    const handleShowNewTaskForm = () => {
+      taskLogger.info('Evento show-new-task-form recebido', {
+        currentFormState: showNewTaskForm,
+        timestamp: Date.now()
+      })
+      
+      setShowNewTaskForm(true)
+      
+      taskLogger.debug('Estado showNewTaskForm atualizado para true')
+    }
+
+    window.addEventListener('show-new-task-form', handleShowNewTaskForm)
+    taskLogger.debug('Event listener adicionado com sucesso')
+    
+    return () => {
+      taskLogger.debug('Removendo event listener show-new-task-form')
+      window.removeEventListener('show-new-task-form', handleShowNewTaskForm)
+    }
+  }, [])
 
   // Separar tarefas por status
   const allPendingTasks = todayTasks.filter(task => task.status === 'pendente')
@@ -92,7 +119,7 @@ export function DailyTasksList({ userId, todayTasks, overdueTasks }: DailyTasksL
       {/* Tarefas de Hoje */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Tarefas Pendentes */}
-        <Card>
+        <Card data-testid="pending-tasks-section">
           <CardHeader>
             <div className="flex items-center justify-between">
               <CardTitle className="flex items-center gap-2">
