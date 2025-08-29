@@ -10,6 +10,7 @@ import { Badge } from "@/components/ui/badge"
 import { Clock } from "lucide-react"
 import { createClient } from "@/lib/supabase/client"
 import { useRouter } from "next/navigation"
+import { clientTaskLogger as taskLogger } from "@/lib/client-logger"
 
 interface NewTaskFormProps {
   userId: string
@@ -42,33 +43,68 @@ export function NewTaskForm({ userId, onSuccess, onCancel }: NewTaskFormProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!title.trim()) return
+    
+    taskLogger.info('Iniciando criação de nova tarefa', {
+      component: 'NewTaskForm',
+      formData: {
+        title: title.trim(),
+        category,
+        priority,
+        dueDate,
+        estimatedTime,
+        hasDescription: !!description.trim()
+      }
+    })
+    
+    if (!title.trim()) {
+      taskLogger.warning('Tentativa de criar tarefa sem título')
+      return
+    }
 
     setIsLoading(true)
     const supabase = createClient()
     
     try {
+      taskLogger.debug('Conectando com Supabase para inserir tarefa')
+      
+      const taskData = {
+        user_id: userId,
+        titulo: title.trim(),
+        descricao: description.trim() || null,
+        categoria: category,
+        prioridade: priority,
+        tempo_estimado: estimatedTime,
+        data_vencimento: dueDate,
+        status: 'pendente'
+      }
+      
+      taskLogger.debug('Dados da tarefa preparados', taskData)
+      
       const { error } = await supabase
         .from("tarefas")
-        .insert({
-          user_id: userId,
-          titulo: title.trim(),
-          descricao: description.trim() || null,
-          categoria: category,
-          prioridade: priority,
-          tempo_estimado: estimatedTime,
-          data_vencimento: dueDate,
-          status: 'pendente'
-        })
+        .insert(taskData)
 
-      if (error) throw error
+      if (error) {
+        taskLogger.error('Erro do Supabase ao inserir tarefa', {
+          error: error.message,
+          code: error.code,
+          details: error.details
+        })
+        throw error
+      }
       
+      taskLogger.info('Tarefa criada com sucesso')
       onSuccess()
       router.refresh()
+      
     } catch (error) {
-      console.error("Erro ao criar tarefa:", error)
+      taskLogger.error('Erro ao criar tarefa', {
+        error: error instanceof Error ? error.message : String(error),
+        stack: error instanceof Error ? error.stack : undefined
+      })
     } finally {
       setIsLoading(false)
+      taskLogger.debug('Estado de loading finalizado')
     }
   }
 

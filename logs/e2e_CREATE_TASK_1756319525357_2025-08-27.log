@@ -1,0 +1,97 @@
+[2025-08-27T18:32:05.358Z] [INFO] [CREATE_TASK_1756319525357] === TESTE E2E INICIADO ===
+[2025-08-27T18:32:05.358Z] [INFO] [CREATE_TASK_1756319525357] Teste: CREATE_TASK_1756319525357
+[2025-08-27T18:32:05.358Z] [INFO] [CREATE_TASK_1756319525357] Data/Hora: 2025-08-27T18:32:05.357Z
+[2025-08-27T18:32:05.358Z] [INFO] [CREATE_TASK_1756319525357] ================================
+[2025-08-27T18:32:05.361Z] [INFO] [CREATE_TASK_1756319525357] Iniciando teste de criação de tarefa
+[2025-08-27T18:32:05.364Z] [INFO] [CREATE_TASK_1756319525357] Simulando login de usuário...
+[2025-08-27T18:32:06.565Z] [INFO] [CREATE_TASK_1756319525357] Navegou para página de tasks
+[2025-08-27T18:32:06.569Z] [INFO] [CREATE_TASK_1756319525357] === TESTE 5: Responsividade ===
+[2025-08-27T18:32:06.569Z] [INFO] [CREATE_TASK_1756319525357] Testando viewport: Desktop Large (1920x1080)
+[2025-08-27T18:32:06.976Z] [ERROR] [CREATE_TASK_1756319525357] REQUEST FAILED: GET http://localhost:3005/_next/static/webpack/1ed29a8fffee0da4.webpack.hot-update.json
+  Extra Data: {
+  "failure": "net::ERR_ABORTED"
+}
+[2025-08-27T18:32:06.978Z] [ERROR] [CREATE_TASK_1756319525357] REQUEST FAILED: GET http://localhost:3005/auth/login?_rsc=15n8u
+  Extra Data: {
+  "failure": "net::ERR_ABORTED"
+}
+[2025-08-27T18:32:06.979Z] [WARNING] [CREATE_TASK_1756319525357] CONSOLE WARNING: [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree.
+[2025-08-27T18:32:08.125Z] [INFO] [CREATE_TASK_1756319525357] Desktop Large - Botão cabeçalho visível: false
+[2025-08-27T18:32:08.126Z] [INFO] [CREATE_TASK_1756319525357] Desktop Large - Botão lista visível: false
+[2025-08-27T18:32:08.126Z] [INFO] [CREATE_TASK_1756319525357] Testando viewport: Desktop Medium (1366x768)
+[2025-08-27T18:32:08.142Z] [DEBUG] [CREATE_TASK_1756319525357] CONSOLE LOG: [Fast Refresh] rebuilding
+[2025-08-27T18:32:08.740Z] [DEBUG] [CREATE_TASK_1756319525357] CONSOLE LOG: [Fast Refresh] rebuilding
+[2025-08-27T18:32:08.806Z] [ERROR] [CREATE_TASK_1756319525357] REQUEST FAILED: GET http://localhost:3005/auth/login?_rsc=15n8u
+  Extra Data: {
+  "failure": "net::ERR_ABORTED"
+}
+[2025-08-27T18:32:08.807Z] [ERROR] [CREATE_TASK_1756319525357] REQUEST FAILED: GET http://localhost:3005/_next/static/webpack/078fd6e617e8c37a.webpack.hot-update.json
+  Extra Data: {
+  "failure": "net::ERR_ABORTED"
+}
+[2025-08-27T18:32:08.808Z] [WARNING] [CREATE_TASK_1756319525357] CONSOLE WARNING: [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree.
+[2025-08-27T18:32:10.153Z] [INFO] [CREATE_TASK_1756319525357] Desktop Medium - Botão cabeçalho visível: false
+[2025-08-27T18:32:10.153Z] [INFO] [CREATE_TASK_1756319525357] Desktop Medium - Botão lista visível: false
+[2025-08-27T18:32:10.154Z] [INFO] [CREATE_TASK_1756319525357] Testando viewport: Tablet (768x1024)
+[2025-08-27T18:32:10.167Z] [DEBUG] [CREATE_TASK_1756319525357] CONSOLE LOG: [Fast Refresh] rebuilding
+[2025-08-27T18:32:10.549Z] [DEBUG] [CREATE_TASK_1756319525357] CONSOLE LOG: [Fast Refresh] rebuilding
+[2025-08-27T18:32:10.645Z] [ERROR] [CREATE_TASK_1756319525357] REQUEST FAILED: GET http://localhost:3005/_next/static/webpack/4b01fd9af2d9b687.webpack.hot-update.json
+  Extra Data: {
+  "failure": "net::ERR_ABORTED"
+}
+[2025-08-27T18:32:10.647Z] [ERROR] [CREATE_TASK_1756319525357] REQUEST FAILED: GET http://localhost:3005/auth/login?_rsc=15n8u
+  Extra Data: {
+  "failure": "net::ERR_ABORTED"
+}
+[2025-08-27T18:32:10.647Z] [WARNING] [CREATE_TASK_1756319525357] CONSOLE WARNING: [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree.
+[2025-08-27T18:32:12.283Z] [INFO] [CREATE_TASK_1756319525357] Tablet - Botão cabeçalho visível: false
+[2025-08-27T18:32:12.286Z] [INFO] [CREATE_TASK_1756319525357] Tablet - Botão lista visível: false
+[2025-08-27T18:32:12.287Z] [WARNING] [CREATE_TASK_1756319525357] Possível problema de responsividade em Tablet
+[2025-08-27T18:32:12.288Z] [INFO] [CREATE_TASK_1756319525357] Testando viewport: Mobile (375x667)
+[2025-08-27T18:32:12.307Z] [DEBUG] [CREATE_TASK_1756319525357] CONSOLE LOG: [Fast Refresh] rebuilding
+[2025-08-27T18:32:12.672Z] [DEBUG] [CREATE_TASK_1756319525357] CONSOLE LOG: [Fast Refresh] rebuilding
+[2025-08-27T18:32:12.724Z] [ERROR] [CREATE_TASK_1756319525357] REQUEST FAILED: GET http://localhost:3005/auth/login?_rsc=15n8u
+  Extra Data: {
+  "failure": "net::ERR_ABORTED"
+}
+[2025-08-27T18:32:12.724Z] [ERROR] [CREATE_TASK_1756319525357] REQUEST FAILED: GET http://localhost:3005/_next/static/webpack/0fc813b02e600d81.webpack.hot-update.json
+  Extra Data: {
+  "failure": "net::ERR_ABORTED"
+}
+[2025-08-27T18:32:12.725Z] [WARNING] [CREATE_TASK_1756319525357] CONSOLE WARNING: [Fast Refresh] performing full reload
+
+Fast Refresh will perform a full reload when you edit a file that's imported by modules outside of the React rendering tree.
+You might have a file which exports a React component but also exports a value that is imported by a non-React component file.
+Consider migrating the non-React component export to a separate file and importing it into both files.
+
+It is also possible the parent component of the component you edited is a class component, which disables Fast Refresh.
+Fast Refresh requires at least one parent function component in your React tree.
+[2025-08-27T18:32:14.105Z] [INFO] [CREATE_TASK_1756319525357] Mobile - Botão cabeçalho visível: false
+[2025-08-27T18:32:14.106Z] [INFO] [CREATE_TASK_1756319525357] Mobile - Botão lista visível: false
+[2025-08-27T18:32:14.106Z] [WARNING] [CREATE_TASK_1756319525357] Possível problema de responsividade em Mobile
+[2025-08-27T18:32:14.108Z] [INFO] [CREATE_TASK_1756319525357] === TESTE FINALIZADO ===
+[2025-08-27T18:32:14.108Z] [INFO] [CREATE_TASK_1756319525357] Duração: 8751ms (8.75s)
+[2025-08-27T18:32:14.108Z] [INFO] [CREATE_TASK_1756319525357] Fim: 2025-08-27T18:32:14.108Z
+[2025-08-27T18:32:14.108Z] [INFO] [CREATE_TASK_1756319525357] =========================
+[2025-08-27T18:32:14.114Z] [DEBUG] [CREATE_TASK_1756319525357] CONSOLE LOG: [Fast Refresh] rebuilding

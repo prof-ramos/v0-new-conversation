@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { ArrowLeft, Plus, Calendar, CheckCircle2 } from "lucide-react"
 import Link from "next/link"
+import { clientTaskLogger as taskLogger } from "@/lib/client-logger"
 
 interface TasksHeaderProps {
   progressPercentage: number
@@ -18,6 +19,37 @@ export function TasksHeader({ progressPercentage, completedToday, totalToday }: 
     month: 'long',
     day: 'numeric'
   })
+
+  const handleNewTaskClick = () => {
+    taskLogger.info('Botão "Nova Tarefa" clicado no header', {
+      timestamp: Date.now(),
+      component: 'TasksHeader'
+    })
+    
+    try {
+      // Disparar evento personalizado que será capturado pelo DailyTasksList
+      taskLogger.debug('Disparando evento show-new-task-form')
+      const event = new CustomEvent('show-new-task-form')
+      window.dispatchEvent(event)
+      taskLogger.debug('Evento disparado com sucesso')
+      
+      // Scroll suave para a seção de tarefas pendentes
+      setTimeout(() => {
+        taskLogger.debug('Executando scroll para seção de tarefas pendentes')
+        const pendingSection = document.querySelector('[data-testid="pending-tasks-section"]')
+        if (pendingSection) {
+          taskLogger.debug('Seção encontrada, executando scroll')
+          pendingSection.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        } else {
+          taskLogger.warning('Seção de tarefas pendentes não encontrada no DOM')
+        }
+      }, 100)
+    } catch (error) {
+      taskLogger.error('Erro ao processar clique do botão Nova Tarefa', {
+        error: error instanceof Error ? error.message : String(error)
+      })
+    }
+  }
 
   return (
     <header className="border-b bg-card">
@@ -59,7 +91,7 @@ export function TasksHeader({ progressPercentage, completedToday, totalToday }: 
             )}
           </div>
 
-          <Button size="sm">
+          <Button size="sm" onClick={handleNewTaskClick}>
             <Plus className="h-4 w-4 mr-2" />
             Nova Tarefa
           </Button>

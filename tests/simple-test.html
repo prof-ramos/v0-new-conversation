@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste do Botão Nova Tarefa</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+        }
+        .status { 
+            padding: 10px; 
+            margin: 10px 0; 
+            border-radius: 5px; 
+        }
+        .success { background-color: #d4edda; color: #155724; }
+        .error { background-color: #f8d7da; color: #721c24; }
+        .info { background-color: #d1ecf1; color: #0c5460; }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        button:hover { background: #0056b3; }
+        .form-container {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            margin: 10px 0;
+            display: none;
+        }
+        .form-container.show {
+            display: block;
+            border-color: #28a745;
+            background-color: #f8fff9;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧪 Teste de Funcionalidade do Botão "Nova Tarefa"</h1>
+    
+    <div id="status" class="status info">
+        Iniciando testes...
+    </div>
+
+    <h2>Simulação do Header com Botão</h2>
+    <button id="headerButton" onclick="simulateHeaderButtonClick()">
+        ➕ Nova Tarefa (Header)
+    </button>
+
+    <h2>Simulação da Lista de Tarefas</h2>
+    <button id="listButton" onclick="toggleForm()">
+        ➕ Nova Tarefa (Lista)
+    </button>
+
+    <div id="taskForm" class="form-container">
+        <h3>📝 Formulário de Nova Tarefa</h3>
+        <p>✅ O formulário foi exibido com sucesso!</p>
+        <button onclick="hideForm()">❌ Cancelar</button>
+        <button onclick="hideForm()">💾 Salvar</button>
+    </div>
+
+    <h2>Logs de Debug</h2>
+    <div id="logs" style="background: #f8f9fa; padding: 10px; border-radius: 5px; max-height: 300px; overflow-y: auto;">
+    </div>
+
+    <script>
+        let showForm = false;
+        
+        function log(message, type = 'info') {
+            const logs = document.getElementById('logs');
+            const timestamp = new Date().toLocaleTimeString();
+            const logEntry = document.createElement('div');
+            logEntry.innerHTML = `[${timestamp}] ${type.toUpperCase()}: ${message}`;
+            logEntry.style.color = type === 'error' ? 'red' : type === 'success' ? 'green' : 'blue';
+            logs.appendChild(logEntry);
+            logs.scrollTop = logs.scrollHeight;
+            console.log(`[${timestamp}] ${type.toUpperCase()}: ${message}`);
+        }
+
+        function updateStatus(message, type = 'info') {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.className = `status ${type}`;
+            log(message, type);
+        }
+
+        // Simular evento igual ao do componente React
+        function simulateHeaderButtonClick() {
+            log('Botão do header clicado - simulando comportamento React', 'info');
+            
+            try {
+                // 1. Criar e disparar evento customizado
+                log('Criando evento customizado show-new-task-form', 'info');
+                const event = new CustomEvent('show-new-task-form', {
+                    detail: { source: 'header-button' }
+                });
+                
+                log('Disparando evento no window', 'info');
+                window.dispatchEvent(event);
+                log('Evento disparado com sucesso', 'success');
+                
+                // 2. Simular scroll para seção
+                setTimeout(() => {
+                    log('Executando scroll para seção de formulário', 'info');
+                    const formContainer = document.getElementById('taskForm');
+                    if (formContainer) {
+                        formContainer.scrollIntoView({ behavior: 'smooth' });
+                        log('Scroll executado com sucesso', 'success');
+                    } else {
+                        log('Elemento de formulário não encontrado', 'error');
+                    }
+                }, 100);
+                
+                updateStatus('✅ Simulação do header concluída', 'success');
+                
+            } catch (error) {
+                log(`Erro na simulação: ${error.message}`, 'error');
+                updateStatus('❌ Erro na simulação do header', 'error');
+            }
+        }
+
+        function toggleForm() {
+            showForm = !showForm;
+            const form = document.getElementById('taskForm');
+            
+            if (showForm) {
+                form.classList.add('show');
+                log('Formulário exibido via botão da lista', 'success');
+                updateStatus('✅ Formulário exibido', 'success');
+            } else {
+                form.classList.remove('show');
+                log('Formulário ocultado via botão da lista', 'info');
+                updateStatus('ℹ️ Formulário ocultado', 'info');
+            }
+        }
+
+        function hideForm() {
+            showForm = false;
+            document.getElementById('taskForm').classList.remove('show');
+            log('Formulário fechado', 'info');
+            updateStatus('ℹ️ Formulário fechado', 'info');
+        }
+
+        // Listener para o evento customizado (simular componente React)
+        window.addEventListener('show-new-task-form', function(event) {
+            log(`Evento recebido: ${JSON.stringify(event.detail)}`, 'success');
+            showForm = true;
+            document.getElementById('taskForm').classList.add('show');
+            updateStatus('✅ Evento capturado e formulário exibido!', 'success');
+        });
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', function() {
+            log('Página carregada e event listener configurado', 'success');
+            updateStatus('✅ Teste pronto - clique nos botões acima', 'success');
+        });
+    </script>
+</body>
+</html>

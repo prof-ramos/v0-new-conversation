@@ -1,0 +1,308 @@
+{
+  "config": {
+    "configFile": "/Users/gabrielramos/v0-new-conversation/playwright.config.ts",
+    "rootDir": "/Users/gabrielramos/v0-new-conversation/e2e-tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": "/Users/gabrielramos/v0-new-conversation/e2e-tests/global-setup.ts",
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 2
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "logs/test-results.json"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/gabrielramos/v0-new-conversation/logs/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/gabrielramos/v0-new-conversation/e2e-tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/gabrielramos/v0-new-conversation/logs/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Users/gabrielramos/v0-new-conversation/e2e-tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/gabrielramos/v0-new-conversation/logs/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Users/gabrielramos/v0-new-conversation/e2e-tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/gabrielramos/v0-new-conversation/logs/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "Mobile Chrome",
+        "name": "Mobile Chrome",
+        "testDir": "/Users/gabrielramos/v0-new-conversation/e2e-tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/gabrielramos/v0-new-conversation/logs/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 2
+        },
+        "id": "Mobile Safari",
+        "name": "Mobile Safari",
+        "testDir": "/Users/gabrielramos/v0-new-conversation/e2e-tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.0",
+    "workers": 4,
+    "webServer": {
+      "command": "pnpm dev",
+      "url": "http://localhost:3006",
+      "reuseExistingServer": true,
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "task-creation-fixed.spec.ts",
+      "file": "task-creation-fixed.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "✅ VALIDAÇÃO: Correção do Problema Criar Tarefa",
+          "file": "task-creation-fixed.spec.ts",
+          "line": 22,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Deve mostrar tela de autenticação necessária em vez de redirecionamento",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11154,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[2025-08-27T18:53:31.263Z] === TESTE DE VALIDAÇÃO: CORREÇÃO IMPLEMENTADA ===\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:31.532Z] Acessando /tasks para validar correção\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:38.087Z] URL atual: \"http://localhost:3006/auth/login\"\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:38.088Z] Permaneceu na página de tarefas:\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:38.088Z] ❌ PROBLEMA: Ainda está sendo redirecionado (correção não funcionou)\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:38.280Z] Verificando acessibilidade da correção\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:38.351Z] Elementos de acessibilidade encontrados: {\"headings\":0,\"buttons\":2,\"links\":1}\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:38.352Z] === VALIDAÇÃO CONCLUÍDA ===\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-27T18:53:20.263Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5dc3fd534daf4309efb4-43915e9e65f8e4e677a1",
+              "file": "task-creation-fixed.spec.ts",
+              "line": 24,
+              "column": 7
+            },
+            {
+              "title": "Deve validar responsividade da nova tela",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 29259,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "[2025-08-27T18:53:31.454Z] === TESTE DE RESPONSIVIDADE: NOVA TELA DE AUTH ===\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:31.520Z] Testando responsividade: mobile (375x667)\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:37.348Z] mobile - Título visível:\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:37.355Z] mobile - Botão visível:\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:37.777Z] ⚠️ mobile: Possível problema de responsividade\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:37.778Z] Testando responsividade: tablet (768x1024)\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:42.903Z] tablet - Título visível:\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:42.905Z] tablet - Botão visível:\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:43.128Z] ⚠️ tablet: Possível problema de responsividade\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:43.129Z] Testando responsividade: desktop (1280x720)\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:48.715Z] desktop - Título visível:\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:48.717Z] desktop - Botão visível:\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:49.027Z] ⚠️ desktop: Possível problema de responsividade\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:49.028Z] Testando responsividade: desktop-large (1920x1080)\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:53.141Z] desktop-large - Título visível:\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:53.148Z] desktop-large - Botão visível:\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:55.013Z] ⚠️ desktop-large: Possível problema de responsividade\n"
+                        },
+                        {
+                          "text": "[2025-08-27T18:53:55.018Z] === TESTE DE RESPONSIVIDADE CONCLUÍDO ===\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-27T18:53:20.256Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5dc3fd534daf4309efb4-ae04baffe84841a9da28",
+              "file": "task-creation-fixed.spec.ts",
+              "line": 118,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-08-27T18:53:13.665Z",
+    "duration": 48962.762,
+    "expected": 2,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
