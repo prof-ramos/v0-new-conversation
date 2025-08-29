@@ -1,0 +1,2 @@
+{"timestamp":"2025-08-29T18:14:30.241Z","level":"INFO","component":"APP","message":"Logger inicializado","data":{"context":"APP","logFile":"/Users/gabrielramos/v0-new-conversation/logs/app_2025-08-29.log"}}
+{"timestamp":"2025-08-29T18:14:33.278Z","level":"INFO","component":"APP","message":"Logger inicializado","data":{"context":"APP","logFile":"/Users/gabrielramos/v0-new-conversation/logs/app_2025-08-29.log"}}

@@ -190,8 +190,8 @@ export function useFormValidation(options: UseFormValidationOptions = {}) {
   return {
     // Estados
     errors: validationState.errors,
-    isValidating: validationState.isValidating,
-    hasBeenTouched: validationState.hasBeenTouched,
+    validatingFields: validationState.isValidating,
+    touchedFields: validationState.hasBeenTouched,
 
     // Handlers
     handleFieldChange,
@@ -206,8 +206,8 @@ export function useFormValidation(options: UseFormValidationOptions = {}) {
     clearFieldError,
     hasError,
     getError,
-    isValidating: isValidating,
-    hasBeenTouched: hasBeenTouched,
+    isValidating,
+    hasBeenTouched,
     hasAnyError,
     isAnyFieldValidating
   }

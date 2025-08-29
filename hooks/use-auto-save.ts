@@ -310,9 +310,9 @@ export function useFormAutoSave<T extends Record<string, any>>(
    */
   const saveFormData = useCallback((formData: T) => {
     // Filtrar campos vazios para não poluir o storage
-    const nonEmptyData = Object.entries(formData).reduce((acc, [key, value]) => {
+    const nonEmptyData = Object.entries(formData as Record<string, any>).reduce((acc, [key, value]) => {
       if (value !== '' && value !== null && value !== undefined) {
-        acc[key] = value
+        (acc as any)[key] = value
       }
       return acc
     }, {} as Partial<T>)

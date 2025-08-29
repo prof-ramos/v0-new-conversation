@@ -184,7 +184,7 @@ class TestRunner {
 }
 
 // Executar se chamado diretamente
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   const runner = new TestRunner()
   runner.run().catch(console.error)
 }

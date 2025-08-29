@@ -2,7 +2,6 @@
 
 import { useCallback } from 'react'
 import { useToast } from '@/components/ui/use-toast'
-import { Button } from '@/components/ui/button'
 import { mapErrorToCode, getErrorConfig, ErrorCode } from '@/lib/error-mappings'
 import { clientLogger } from '@/lib/client-logger'
 import Link from 'next/link'
@@ -69,26 +68,10 @@ export function useErrorHandler() {
     
     // Toast notification para usuário
     toast({
-      variant: errorConfig.variant,
+      variant: errorConfig.variant as any,
       title: errorConfig.title,
       description: errorConfig.message,
-      action: errorConfig.action && (
-        errorConfig.action.href ? (
-          <Button asChild variant="outline" size="sm">
-            <Link href={errorConfig.action.href}>
-              {errorConfig.action.label}
-            </Link>
-          </Button>
-        ) : (
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={errorConfig.action.onClick}
-          >
-            {errorConfig.action.label}
-          </Button>
-        )
-      )
+      duration: 5000
     })
     
     // Métricas (em ambiente de produção, enviar para serviço de analytics)
