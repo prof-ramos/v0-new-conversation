@@ -1,0 +1,101 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+
+language: "pt-BR"
+early_access: false
+reviews:
+  profile: "chill"
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: true
+  review_status: true
+  collapse_empty_files: true
+  auto_review:
+    enabled: true
+    ignore_title_keywords:
+      - "WIP"
+      - "DO NOT MERGE"
+    drafts: false
+  path_instructions:
+    - path: "docs/**"
+      instructions: |
+        Verifique se a documentação está clara e bem estruturada.
+        Sugira melhorias na organização e legibilidade.
+        Valide se os diagramas Mermaid estão corretos.
+    - path: "**/*.test.*"
+      instructions: |
+        Foque na cobertura de cenários críticos.
+        Verifique se os testes são legíveis e mantíveis.
+        Sugira casos de teste adicionais se necessário.
+    - path: "app/**"
+      instructions: |
+        Revise patterns do Next.js 15 e App Router.
+        Verifique performance e SEO considerations.
+        Valide uso correto de Server/Client Components.
+    - path: "components/**"
+      instructions: |
+        Verifique acessibilidade (a11y) dos componentes.
+        Revise props typing e reutilização.
+        Sugira melhorias na organização por features.
+    - path: "lib/**"
+      instructions: |
+        Foque em type safety e error handling.
+        Revise integração com Supabase.
+        Verifique security best practices.
+  knowledge_base:
+    learnings:
+      enabled: true
+      max_issues: 100
+    opt_out: false
+  auto_title_update:
+    enabled: true
+  tools:
+    biome:
+      enabled: true
+    gitleaks:
+      enabled: true
+    golangci-lint:
+      enabled: true
+    hadolint:
+      enabled: true
+    swiftlint:
+      enabled: true
+    yamllint:
+      enabled: true
+    ruff:
+      enabled: true
+    markdownlint:
+      enabled: true
+      config:
+        line-length:
+          line_length: 120
+    shellcheck:
+      enabled: true
+    actionlint:
+      enabled: true
+    eslint:
+      enabled: true
+    detekt:
+      enabled: true
+    ktlint:
+      enabled: true
+    buf:
+      enabled: true
+    trufflehog:
+      enabled: true
+    semgrep:
+      enabled: true
+      rules:
+        - "p/security-audit"
+        - "p/secrets"
+        - "p/typescript"
+        - "p/react"
+        - "p/nextjs"
+  ignore:
+    - "pnpm-lock.yaml"
+    - "*.log"
+    - "node_modules/**"
+    - ".next/**"
+    - "playwright-report/**"
+    - "logs/**"
+chat:
+  auto_reply: true
