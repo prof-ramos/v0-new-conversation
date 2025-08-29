@@ -45,7 +45,7 @@ async function executeWithRetry<T>(
   options: RetryOptions = {}
 ): Promise<T> {
   const opts = { ...DEFAULT_RETRY_OPTIONS, ...options }
-  let lastError: Error
+  let lastError: Error = new Error('Unknown error')
 
   for (let attempt = 1; attempt <= opts.maxRetries + 1; attempt++) {
     try {
@@ -190,10 +190,10 @@ export class SupabaseRetryClient {
                   query = query.lte(key, operatorValue)
                   break
                 case 'like':
-                  query = query.like(key, operatorValue)
+                  query = query.like(key, String(operatorValue))
                   break
                 case 'ilike':
-                  query = query.ilike(key, operatorValue)
+                  query = query.ilike(key, String(operatorValue))
                   break
                 default:
                   query = query.eq(key, operatorValue)

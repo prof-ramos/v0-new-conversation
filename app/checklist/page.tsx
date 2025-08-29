@@ -43,8 +43,8 @@ export default async function ChecklistPage() {
     const materiaWithProgress = materias?.find((m) => m.id === materia.id)
     return {
       ...materia,
-      topicos: materia.topicos?.map((topico) => {
-        const topicoWithProgress = materiaWithProgress?.topicos?.find((t) => t.id === topico.id)
+      topicos: materia.topicos?.map((topico: any) => {
+        const topicoWithProgress = materiaWithProgress?.topicos?.find((t: any) => t.id === topico.id)
         return {
           ...topico,
           progresso_usuario: topicoWithProgress?.progresso_usuario || [],
