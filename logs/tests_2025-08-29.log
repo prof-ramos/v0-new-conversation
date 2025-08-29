@@ -1,2 +1,4 @@
 {"timestamp":"2025-08-29T18:14:30.245Z","level":"INFO","component":"TESTS","message":"Logger inicializado","data":{"context":"TESTS","logFile":"/Users/gabrielramos/v0-new-conversation/logs/tests_2025-08-29.log"}}
 {"timestamp":"2025-08-29T18:14:33.280Z","level":"INFO","component":"TESTS","message":"Logger inicializado","data":{"context":"TESTS","logFile":"/Users/gabrielramos/v0-new-conversation/logs/tests_2025-08-29.log"}}
+{"timestamp":"2025-08-29T18:48:35.058Z","level":"INFO","component":"TESTS","message":"Logger inicializado","data":{"context":"TESTS","logFile":"/Users/gabrielramos/v0-new-conversation/logs/tests_2025-08-29.log"}}
+{"timestamp":"2025-08-29T18:48:42.918Z","level":"INFO","component":"TESTS","message":"Logger inicializado","data":{"context":"TESTS","logFile":"/Users/gabrielramos/v0-new-conversation/logs/tests_2025-08-29.log"}}
